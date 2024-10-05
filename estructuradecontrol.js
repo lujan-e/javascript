@@ -10,40 +10,42 @@ function verificarParidad(numero) {
         console.log("El número es impar");
     }
 }
-verificarParidad()
+verificarParidad(8);
+
 // Ejercicio 2: Condicionales anidados
 // Instrucción: Escribe una función que reciba una edad y determine si la persona es:
 // "Menor de edad" (menor a 18), "Adulto" (entre 18 y 65), o "Adulto mayor" (mayor a 65).
 function clasificarEdad(edad) {
-    if (edad < 18){
-        console.log("eres menor de edad");
-    } else if (edad >= 18 && edad <= 65){
-        console.log("eres adulto");
+    if (edad < 18) {
+        console.log("Eres menor de edad");
+    } else if (edad >= 18 && edad <= 65) {
+        console.log("Eres adulto");
     } else {
-        console.log("Adulto mayor:l")
+        console.log("Eres adulto mayor");
     }
-
-
 }
-clasificarEdad(15)
+clasificarEdad(15);
+
 // Ejercicio 3: Bucles while
 // Instrucción: Crea una función que reciba un número entero positivo y utilice un bucle `while` para imprimir todos los números desde ese número hasta 0.
 function cuentaRegresiva(numero) {
-        while (numero >= 0) {
-            console.log(numero);
-            numero--; 
+    while (numero >= 0) {
+        console.log(numero);
+        numero--;
+    }
 }
+cuentaRegresiva(10);
 
-}
 // Ejercicio 4: Bucles do-while
 // Instrucción: Escribe una función que imprima "Estoy aprendiendo JavaScript" 5 veces utilizando un bucle `do-while`.
 function repetirMensaje() {
-let contador = 0;
-do {
-    console.log("Estoy aprendiendo JavaScript");
-    contador++;
-} while (contador < 5);
+    let contador = 0;
+    do {
+        console.log("Estoy aprendiendo JavaScript");
+        contador++;
+    } while (contador < 5);
 }
+repetirMensaje();
 
 // Ejercicio 5: Bucle for
 // Instrucción: Escribe una función que reciba un número entero positivo y utilice un bucle `for` para imprimir todos los números pares entre 0 y ese número.
@@ -53,20 +55,20 @@ function imprimirPares(numero) {
             console.log(i);
         }
     }
-
 }
+imprimirPares(8);
 
 // Ejercicio 6: Uso de break
 // Instrucción: Escribe una función que recorra los números del 1 al 10, pero detén el bucle cuando el número sea igual a 6.
 function detenerEnSeis() {
     for (let i = 1; i <= 10; i++) {
         if (i === 6) {
-            break; 
+            break;
         }
         console.log(i);
     }
 }
-
+detenerEnSeis();
 
 // Ejercicio 7: Uso de continue
 // Instrucción: Crea una función que recorra los números del 1 al 10, pero que se salte el número 5 usando `continue`.
@@ -78,11 +80,12 @@ function saltarCinco() {
         console.log(i);
     }
 }
+saltarCinco();
 
 // Ejercicio 8: Switch básico
 // Instrucción: Escribe una función que reciba un número del 1 al 7 y devuelva el día de la semana correspondiente (1 es "Lunes", 2 es "Martes", ..., 7 es "Domingo"). Usa la estructura `switch`.
 function obtenerDiaSemana(dia) {
-    switch (numero) {
+    switch (dia) {
         case 1:
             return "Lunes";
         case 2:
@@ -101,12 +104,12 @@ function obtenerDiaSemana(dia) {
             return "Número no válido. Debe ser entre 1 y 7.";
     }
 }
-
+console.log(obtenerDiaSemana(3)); 
 
 // Ejercicio 9: Switch con múltiples casos
 // Instrucción: Escribe una función que reciba un carácter y devuelva si es una vocal. Utiliza un `switch` y agrupa los casos para las vocales (a, e, i, o, u).
 function esVocal(letra) {
-    switch (caracter.toLowerCase()) { 
+    switch (letra.toLowerCase()) {
         case 'a':
         case 'e':
         case 'i':
@@ -115,22 +118,24 @@ function esVocal(letra) {
             return "Es una vocal";
         default:
             return "No es una vocal";
+    }
 }
-}
+console.log(esVocal('a')); 
+
 // Ejercicio 10: Condicionales complejos con operadores lógicos
 // Instrucción: Escribe una función que reciba tres números y determine si todos son positivos, al menos uno es negativo, o todos son negativos. Usa operadores lógicos (`&&`, `||`).
 function evaluarNumeros(a, b, c) {
-    if (num1 > 0 && num2 > 0 && num3 > 0) {
+    if (a > 0 && b > 0 && c > 0) {
         return "Todos los números son positivos";
-    } else if (num1 < 0 || num2 < 0 || num3 < 0) {
+    } else if (a < 0 || b < 0 || c < 0) {
         return "Al menos uno de los números es negativo";
-    } else if (num1 < 0 && num2 < 0 && num3 < 0) {
+    } else if (a < 0 && b < 0 && c < 0) {
         return "Todos los números son negativos";
     } else {
         return "Hay una combinación de positivos y ceros";
     }
 }
-
+console.log(evaluarNumeros(1, -2, 3)); 
 
 // Exportar todas las funciones
 export {
