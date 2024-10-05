@@ -127,15 +127,17 @@ console.log(esVocal('a'));
 function evaluarNumeros(a, b, c) {
     if (a > 0 && b > 0 && c > 0) {
         return "Todos los números son positivos";
-    } else if (a < 0 || b < 0 || c < 0) {
-        return "Al menos uno de los números es negativo";
     } else if (a < 0 && b < 0 && c < 0) {
         return "Todos los números son negativos";
+    } else if (a < 0 || b < 0 || c < 0) {
+        return "Al menos uno de los números es negativo";
     } else {
         return "Hay una combinación de positivos y ceros";
     }
 }
-console.log(evaluarNumeros(1, -2, 3)); 
+
+console.log(evaluarNumeros(-1, -2, -3));  
+
 
 // Exportar todas las funciones
 export {
